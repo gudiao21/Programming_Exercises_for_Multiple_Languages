@@ -8,11 +8,11 @@ import (
 
 func main() {
 	fmt.Print("Digite qualquer tamanho de array de inteiros, separados por vírgula: ")
-	var input string
+	var input string //Aqui é apenas a DECLARAÇÃO da variável 'input'
 	fmt.Scanln(&input)
 
 	// Divide a string em um slice de strings
-	numbers := strings.Split(input, ",")
+	numbers := strings.Split(input, ",") //Aqui já se DECLARA a variável 'number' e ATRIBUI um valor a ela ao mesmo tempo usando ':='.
 
 	// Converte cada string em um inteiro e calcula a soma
 	total := 0
@@ -26,3 +26,4 @@ func main() {
 	}
 
 	fmt.Printf("\nA soma de todos os elementos do array é: %d\n", total)
+}
