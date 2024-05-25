@@ -7,7 +7,7 @@ arr2 = ["pedro"]
 name_composto1 = arr1.map do |name|
   partes = name.split(' ')
   first_name = partes[0][0].upcase + partes[0][1..-1]
-  last_name = partes[-1][0].upcase + partes[-1][1..-1]
+  last_name = partes[-1][0..1].upcase + partes[-1][2..-1]
   "#{first_name} #{last_name}"
 end
 
