@@ -3,18 +3,19 @@ require 'pry-nav'
 
 arr1 = ["ana maria", "joão silva"]
 arr2 = ["pedro"]
+
 name_composto1 = arr1.map do |name|
   partes = name.split(' ')
-  first_name = partes[0].capitalize
-  last_name = partes[-1].capitalize
+  first_name = partes[0][0].upcase + partes[0][1..-1]
+  last_name = partes[-1][0].upcase + partes[-1][1..-1]
   "#{first_name} #{last_name}"
 end
 
 name_composto2 = arr2.map do |name|
-  partes = name.split('  ')
-  first_name = partes[0].capitalize
+  partes = name.split(' ')
+  first_name = partes[0][0].upcase + partes[0][1..-1]
   "#{first_name}"
 end  
 
-print name_composto1
-print name_composto2
+puts name_composto1
+puts name_composto2
